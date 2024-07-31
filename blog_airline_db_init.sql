@@ -121,7 +121,7 @@ FROM aircraft
 GROUP BY status;
 
 /* 1SQL script to find the most often booked aircraft by gold status members */
-SELECT MAX(COUNT( a))
+SELECT MAX(COUNT(aircraft_id))
 FROM airlines
          INNER JOIN customer
                     ON aircraft.id = customer.id
